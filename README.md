@@ -11,16 +11,16 @@ The commond "n_queens_solutions(n)" (where n is a number such as 4, 5, 6, etc.) 
 n queens on an n by n board, using the representation discussed above.
 
 Eg. run following code and get corresponding results
->>> solutions = n_queens_solutions(4)
->>> next(solutions)
-[1, 3, 0, 2]
->>> next(solutions)
-[2, 0, 3, 1]
->>> list(n_queens_solutions(6))
-[[1, 3, 5, 0, 2, 4], [2, 5, 1, 4, 0, 3],
- [3, 0, 4, 1, 5, 2], [4, 2, 0, 5, 3, 1]]
->>> len(list(n_queens_solutions(8)))
-92
+    >>> solutions = n_queens_solutions(4)
+    >>> next(solutions)
+    [1, 3, 0, 2]
+    >>> next(solutions)
+    [2, 0, 3, 1]
+    >>> list(n_queens_solutions(6))
+    [[1, 3, 5, 0, 2, 4], [2, 5, 1, 4, 0, 3],
+     [3, 0, 4, 1, 5, 2], [4, 2, 0, 5, 3, 1]]
+    >>> len(list(n_queens_solutions(8)))
+    92
 
 
 Light Out Puzzle: (BFS)
