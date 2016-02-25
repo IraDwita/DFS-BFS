@@ -11,16 +11,26 @@ The commond "n_queens_solutions(n)" (where n is a number such as 4, 5, 6, etc.) 
 n queens on an n by n board, using the representation discussed above.
 
 Eg. run following code and get corresponding results
+
     >>> solutions = n_queens_solutions(4)
+    
     >>> next(solutions)
+    
     [1, 3, 0, 2]
+    
     >>> next(solutions)
+    
     [2, 0, 3, 1]
+    
     >>> list(n_queens_solutions(6))
+    
     [[1, 3, 5, 0, 2, 4], [2, 5, 1, 4, 0, 3],
      [3, 0, 4, 1, 5, 2], [4, 2, 0, 5, 3, 1]]
+     
     >>> len(list(n_queens_solutions(8)))
+    
     92
+    
 
 
 Light Out Puzzle: (BFS)
@@ -36,6 +46,7 @@ python lights_out_gui.py rows cols
 The arguments rows and cols are positive integers designating the size of the puzzle.
 
 Eg. run in command line:
+
 python lights_out_gui.py 3 3
 
 
@@ -48,12 +59,21 @@ of the disks. For example, from the starting position, the only two options are 
 to cell n, or to move the second-to-last disk from cell n−2 to cell n.
 
 Eg. run following code and get corresponding results
->>> solve_distinct_disks(4, 2)
-[(0, 2), (2, 3), (1, 2)]
->>> solve_distinct_disks(5, 2)
-[(0, 2), (1, 3), (2, 4)]
->>> solve_distinct_disks(4, 3)
-[(1, 3), (0, 1), (2, 0), (3, 2), (1, 3), (0, 1)]
->>> solve_distinct_disks(5, 3)
-[(1, 3), (2, 1), (0, 2), (2, 4), (1, 2)]
+
+    >>> solve_distinct_disks(4, 2)
+    
+    [(0, 2), (2, 3), (1, 2)]
+    
+    >>> solve_distinct_disks(5, 2)
+    
+    [(0, 2), (1, 3), (2, 4)]
+    
+    >>> solve_distinct_disks(4, 3)
+    
+    [(1, 3), (0, 1), (2, 0), (3, 2), (1, 3), (0, 1)]
+    
+    >>> solve_distinct_disks(5, 3)
+    
+    [(1, 3), (2, 1), (0, 2), (2, 4), (1, 2)]
+    
 
