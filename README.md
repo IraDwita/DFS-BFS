@@ -3,6 +3,7 @@ N-queens for DFS, Light Out Puzzle for BFS, Linear Disk Movement for BFS
 
 
 N-Queens: (DFS)
+
 Representation: a sensible representation for a board configuration is a list of numbers between 00 and n−1n−1, 
 where the iith number designates the column of the queen in row ii for 0≤i<n0≤i<n. A complete configuration is 
 then specified by a list containing nn numbers.
@@ -51,6 +52,7 @@ python lights_out_gui.py 3 3
 
 
 Linear Disk Movement: (BFS)
+
 The starting configuration of this puzzle is a row of l cells, with disks located on cells 0 through n−1. The goal 
 is to move the disks to the end of the row using a constrained set of actions. At each step, a disk can only be moved 
 to an adjacent empty cell, or to an empty cell two spaces away, provided another disk is located on the intervening 
