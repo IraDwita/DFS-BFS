@@ -1,81 +1,61 @@
 # DFS-BFS
-N-queens for DFS, Light Out Puzzle for BFS, Linear Disk Movement for BFS
 
+Nama  : Ira Dwita Syafitri Tarigan 
+NPM   : 1184024
+Kelas : D4 TI 3A
 
-N-Queens: (DFS)
+1. DFS atau Depth First Search meruapakan algoritma penelusuaran struktur graf berdasarkan 
+kedalaman . Dfs adalah metode berbasis tepi dan bekerja secara rekursif diaman simpul 
+dieksplorasi di sepnajang jalur atau tepi .aplikasi Dfs mencakup pemeriksaan dua graf yang terhubung ke tepi , graf yang terhubung kuat , grafik asiklik dan urutan topologi . dalam DFS ruang memori digunakan secara efisien . 
 
-Representation: a sensible representation for a board configuration is a list of numbers between 00 and n−1n−1, 
-where the iith number designates the column of the queen in row ii for 0≤i<n0≤i<n. A complete configuration is 
-then specified by a list containing nn numbers.
+  DFS 
 
-The commond "n_queens_solutions(n)" (where n is a number such as 4, 5, 6, etc.) yields all valid placements of 
-n queens on an n by n board, using the representation discussed above.
+Reprensentasi untuk konfigurasi papan adalah angka antara 00 dan n -1n -1,  dimana nomor iith menunjukan kolom utama di baris ii untuk 0≤i<n0≤i<n . konfigurasi lengkapnya ialah ditentukan oleh daftar yang berisi nomor nn . n dalam Commond "n_queens_solutions (n)" adalah angka seperti 4,5,6 dan lain lain yang menghasilkan semua penempatan yang valid dari n utama di papan n demi n , menggunakan representasi angka antara 00 dan n -1n -1 . contohnya jalan kode berikut dan hasilnya 
 
-Eg. run following code and get corresponding results
+  solutions = n_queens_solutions(4)
 
-    >>> solutions = n_queens_solutions(4)
+  next(solutions)
+
+   [1, 3, 0, 2]
+   
+   next(solutions)
+   
+   [2,0,3,1]
+   
+   list(n_queens_solutions(6))
+   
+   [[1, 3, 5, 0, 2, 4,] , [2, 5, 1, 4, 0, 3],
+    [3, 0, 4, 1, 5, 2,], [4, 2, 0, 5, 3, 1]]
     
-    >>> next(solutions)
+   len(list(n_queens_solutions(8)))
     
-    [1, 3, 0, 2]
-    
-    >>> next(solutions)
-    
-    [2, 0, 3, 1]
-    
-    >>> list(n_queens_solutions(6))
-    
-    [[1, 3, 5, 0, 2, 4], [2, 5, 1, 4, 0, 3],
-     [3, 0, 4, 1, 5, 2], [4, 2, 0, 5, 3, 1]]
-     
-    >>> len(list(n_queens_solutions(8)))
-    
-    92
-    
+   92 
+ 
+2. BFS atau Breadth First Search merupakan metode traversing yang digunakan dalam grafik . dalam metode ini yang ditekankan adalah pada simpul grafik , BFS dapat berguna dalam menemukan apakah grafik memiliki komponen yang terhubung atau tidak dan itu juga dapat diguanakan dalam mendeteksi grafik bipartit . pemanfaatan ruang memori di bfs tidak efektif . 
 
+   BFS 
+   
+baris argumen dan kolom adalah biilangan bulat positif yang munujukan ukuran teka teki . misalnya . jalankan di baris perintah : 
+python lights_out_gui.py 3 3 
 
-Light Out Puzzle: (BFS)
+gerakan disk linear BFS 
+konfigurasi awal dari teka teki ini adalah baris sel l, dengan disk yang terletak di sel 0 hingga n - 1 . hasilnya ialah memindahkan disk ke akhir baris menggunakan serangkaian tindakan yang dibatasi . disetiap langkah disk hanya dapat dipindahkan ke sel kosong yang berdekatan atau ke sel kosong yang berjarak dua spasi , asalkan disk lain terletak ditengah kotak , dengan adanya pembatas ini terlihat bahwa dalam banyak kasus tidak ada pergerakan yang mungkin dilakukan oleh mayoritas dari disk . misalnya dari posisi awal hanya ada dua pilihan untuk  emindahkan disk terakhir dari sel n - 1 ke sel n atau untuk memindahkan disk kedua ke terakhir dari sel n - 2 ke sel n . 
+misalkan seperti berikut ini .
 
-The Lights Out puzzle consists of an m by n grid of lights, each of which has two states: on and off. The goal of 
-the puzzle is to turn all the lights off, with the caveat that whenever a light is toggled, its neighbors above, 
-below, to the left, and to the right will be toggled as well. If a light along the edge of the board is toggled, 
-then fewer than four other lights will be affected, as the missing neighbors will be ignored.
-
-You can play with an interactive version of the Lights Out puzzle using the provided GUI by running the following 
-command:
-python lights_out_gui.py rows cols
-The arguments rows and cols are positive integers designating the size of the puzzle.
-
-Eg. run in command line:
-
-python lights_out_gui.py 3 3
-
-
-Linear Disk Movement: (BFS)
-
-The starting configuration of this puzzle is a row of l cells, with disks located on cells 0 through n−1. The goal 
-is to move the disks to the end of the row using a constrained set of actions. At each step, a disk can only be moved 
-to an adjacent empty cell, or to an empty cell two spaces away, provided another disk is located on the intervening 
-square. Given these restrictions, it can be seen that in many cases, no movements will be possible for the majority 
-of the disks. For example, from the starting position, the only two options are to move the last disk from cell n−1 
-to cell n, or to move the second-to-last disk from cell n−2 to cell n.
-
-Eg. run following code and get corresponding results
-
-    >>> solve_distinct_disks(4, 2)
+   solve_distinct_disks(4, 2)
     
-    [(0, 2), (2, 3), (1, 2)]
+   [(0, 2), (2, 3), (1, 2)]
     
-    >>> solve_distinct_disks(5, 2)
+   solve_distinct_disks(5, 2)
     
-    [(0, 2), (1, 3), (2, 4)]
+   [(0, 2), (1, 3), (2, 4)]
     
-    >>> solve_distinct_disks(4, 3)
+   solve_distinct_disks(4, 3)
     
-    [(1, 3), (0, 1), (2, 0), (3, 2), (1, 3), (0, 1)]
+   [(1, 3), (0, 1), (2, 0), (3, 2), (1, 3), (0, 1)]
     
-    >>> solve_distinct_disks(5, 3)
+   solve_distinct_disks(5, 3)
     
-    [(1, 3), (2, 1), (0, 2), (2, 4), (1, 2)]
+   [(1, 3), (2, 1), (0, 2), (2, 4), (1, 2)]
     
 
