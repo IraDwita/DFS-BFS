@@ -1,7 +1,9 @@
 # DFS-BFS
 
 Nama  : Ira Dwita Syafitri Tarigan 
+
 NPM   : 1184024
+
 Kelas : D4 TI 3A
 
 1. DFS atau Depth First Search meruapakan algoritma penelusuaran struktur graf berdasarkan 
